@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --primary: #3b82f6;
+  --card-bg: #1e293b;
+}
+
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card-bg: #ffffff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.header {
+  background: var(--card-bg);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--text);
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card.popular {
+  border: 2px solid var(--primary);
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  background: var(--card-bg);
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0.5rem 1rem;
+}
+
+.contact form {
+  display: grid;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  border: none;
+}
